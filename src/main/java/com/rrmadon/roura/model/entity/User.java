@@ -1,5 +1,6 @@
 package com.rrmadon.roura.model.entity;
 
+import com.rrmadon.roura.enumiration.UserRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -17,7 +18,6 @@ public class User extends BaseEntity {
 	@Id
 	@GeneratedValue
 	private Long id;
-
 	private String code;
 
 	private String email;
@@ -29,5 +29,7 @@ public class User extends BaseEntity {
 	private boolean completed;
 
 	private String firebaseId;
+
+	private UserRole role = UserRole.CUSTOMER;
 
 }
